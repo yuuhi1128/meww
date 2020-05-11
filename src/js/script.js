@@ -1,6 +1,11 @@
 let isCatched = false;
 let step = 0;
 
+function randomRunTime() {
+  let levels = [200, 300, 400, 500];
+  return levels[Math.floor(Math.random() * 4)];
+}
+
 function randomCoordinate() {
   const MAX_X = 85;
   const MAX_Y = 86;
@@ -17,7 +22,7 @@ function timeout(time) {
 }
 
 async function run() {
-  await timeout(1000);
+  await timeout(randomRunTime());
 
   let IMG = document.getElementById('cat');
 
