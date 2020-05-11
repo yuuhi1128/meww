@@ -2,7 +2,7 @@ let isCatched = false;
 let step = 0;
 
 function randomRunTime() {
-  let levels = [200, 300, 400, 500];
+  let levels = [300, 350, 400, 500];
   return levels[Math.floor(Math.random() * 4)];
 }
 
@@ -37,7 +37,7 @@ async function run() {
   ++step;
 
   if (step >= 500) {
-    await timeout(800);
+    await timeout(1000);
     const isContinue = confirm('Game Over!\nDo you want to play a new game?');
     if (isContinue) {
       newGame();
