@@ -37,7 +37,7 @@ async function run() {
   ++step;
 
   if (step >= 500) {
-    await timeout(500);
+    await timeout(800);
     const isContinue = confirm('Game Over!\nDo you want to play a new game?');
     if (isContinue) {
       newGame();
@@ -65,7 +65,7 @@ function newGame() {
 async function onMouseDown() {
   isCatched = true;
   catched();
-  await timeout(500);
+  await timeout(800);
   const isContinue = confirm('You Win!\nDo you want to play a new game?');
   if (isContinue) {
     newGame();
